@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Talis Coruja - Lista de Instrumentos</title>
+</head>
+<body>
+
+    <h1>Talis Coruja - Instrumentos Musicais Cadastrados</h1>
+
+    <a href="/instrumento/add">Cadastrar novo instrumento</a>
+
+    <br><br>
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Fabricante</th>
+                <th>Preço</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% instrumentos.forEach(function(instrumento) { %>
+                <tr>
+                    <td><%= instrumento.nome %></td>
+                    <td><%= instrumento.fabricante %></td>
+                    <td>
+                    R$ <%= Number(instrumento.preco).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                    }) %>
+                    </td>
+                    <td><%= instrumento.tipo %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+</body>
+</html>

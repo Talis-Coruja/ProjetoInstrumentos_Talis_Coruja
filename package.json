@@ -1,0 +1,15 @@
+
+{
+  "name": "projeto-instrumentos",
+  "version": "1.0.0",
+  "description": "Cadastro de instrumentos musicais",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
